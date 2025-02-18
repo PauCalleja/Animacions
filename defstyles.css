@@ -1,0 +1,100 @@
+@keyframes fennekin {
+    from{background-position: 0px;}
+    to { background-position: -11500px; } 
+}
+
+@keyframes espeon {
+    from{background-position: 0px;}
+    to { background-position: -2208px; } 
+}
+
+.fennekin {
+    width: 500px;
+    height: 500px;
+    background-image: url("media/fennekin.png");
+    right: 300px; 
+    top: 20%;
+    position: absolute;
+    animation-name: fennekin;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: steps(23);
+}
+
+.fondo {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background: url("media/Campo_de_batalla_DPPt_2.webp");
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.espeon {
+    width: 96px; 
+    height: 96px;
+    background-image: url("media/espeon.png");
+    position: absolute;
+    top: 108%;
+    left: 300px;
+    animation: espeon 2s steps(23) infinite;
+    transform: scale(9); 
+    transform-origin: bottom center;
+}
+.barra1 {
+    width: 556px;
+    height: 371px;
+    top: 10%;
+    background: url("media/barra fen.png");
+    position: absolute;
+}
+.barra2 {
+    width: 556px;
+    height: 371px;
+    right: 30%;
+    top: 40%;
+    background: url("media/barra esp.png");
+    position: absolute;
+}
+
+.barra1, .barra2 {
+    transform: scale(2); 
+    transform-origin: top left; 
+}
+
+.ataque {
+    width: 264px;
+    height: 184px;
+    background: url("media/ataque.png"); /* Imagen del ataque */
+    background-size: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: psiquico 2s infinite;
+}
+
+@keyframes psiquico {
+    0% {
+        transform: scale(0.5) translate(-50%, -50%);
+        opacity: 0.8;
+        top: 65%;
+        left: 40%;
+        filter: hue-rotate(0deg);
+        
+    }
+    50% {
+        transform: scale(1.2) translate(-50%, -50%);
+        opacity: 1;
+        top: 65%;
+        left: 70%;
+        filter: hue-rotate(180deg);
+    }
+    100% {
+        transform: scale(0.5) translate(-50%, -50%);
+        opacity: 0.8;
+        top: 65%;
+        left: 40%;
+        filter: hue-rotate(360deg);
+    }
+}
+
